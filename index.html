@@ -11,13 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-gray: rgba(0, 0, 0, 0.3);
+        --color-light-gray: rgba(0, 0, 0, 0.1);
+        --color-green: #496D4A;
+        --color-blue: #0248AA;
+        --color-purple: #772E9B;
+        --color-orange: #D3712C;
+        --color-yellow: #FFC800;
+        --color-graphite: #595959;
+
+        --font-logo: "Caprasimo", serif;
+        --font-text: "Outfit", sans-serif;
+      }
+    </style>
 </head>
 
-<body>
+<body class="px-[40px] font-text">
 
-    <header> </header>
+    <header class="flex justify-between items-center border-b-1 border-graphite py-[18px]">
+        <h1 class="text-[30px] font-logo">
+            <a href="#">Our Blooms®</a>
+        </h1>
+        <nav>
+            <ul class="flex font-bold uppercase text-[14px] gap-[40px]">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html">About</a></li>
+                <li><a href="gallery.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p> content </p>
+
 
     <footer> </footer>
 </body>
