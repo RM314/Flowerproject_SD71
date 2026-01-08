@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Blooms</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-gray: rgba(0, 0, 0, 0.3);
+        --color-light-gray: rgba(0, 0, 0, 0.1);
+        --color-green: #496D4A;
+        --color-blue: #0248AA;
+        --color-purple: #772E9B;
+        --color-orange: #D3712C;
+        --color-yellow: #FFC800;
+        --color-graphite: #595959;
+
+        --font-logo: "Caprasimo", serif;
+        --font-text: "Outfit", sans-serif;
+
+        --breakpoint-md: 800px;
+        --breakpoint-lg: 1280px;
+      }
+
+      @layer components {
+        .line {
+            @apply block w-[24px] h-[2px] bg-black rounded-full transition-all duration-300 ease-in-out;
+        }
+
+        .burger.open .line-1 {
+            @apply rotate-45 translate-y-[9px];
+        }
+
+        .burger.open .line-2 {
+            @apply opacity-0;
+        }
+
+        .burger.open .line-3 {
+            @apply -rotate-45 -translate-y-[9px];
+        }
+      }
+    </style>
+</head>
+
+<body class="px-[40px] font-text">
+    <header class="flex flex-wrap justify-between items-center border-b-1 border-graphite md:px-0 px-[16px] py-[20px]">
+        <h1 class="text-[20px] md:text-[28px] lg:text-[30px] font-logo">
+            <a href="index.html" class="md:block hidden">Our Blooms®</a>
+            <a href="index.html" class="md:hidden">O.B.</a>
+        </h1>
+        <button id="toggle" type="button" class="burger md:hidden flex flex-col gap-[7px] cursor-pointer"
+            aria-label="Toggle menu" aria-expanded="false">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </button>
+        <nav class="md:block md:w-auto w-[100%] hidden" id="menu">
+            <ul class="flex md:flex-row flex-col items-center font-bold uppercase text-[14px] gap-[20px] md:gap-[40px]">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mailto:hello@ourblooms.com">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-12 mt-12">GALLERY</h1>
+
+    <section class="mt-12 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-12">
+
+            <h2 class="text-sm font-medium uppercase whitespace-nowrap">
+                Seasonal Arrangements
+            </h2>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> DAWN BLOOM </span>
+                        <span class="text-sm font-medium"> $55 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image1.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> SOLSTICE STEMS </span>
+                        <span class="text-sm font-medium"> $30 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image2.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> WHISPER GREENS </span>
+                        <span class="text-sm font-medium"> $120 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image3.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> CLARITY PETALS </span>
+                        <span class="text-sm font-medium"> $55 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image4.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> RIVER STONE </span>
+                        <span class="text-sm font-medium"> $30 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image5.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> MOONLIT MEADOW </span>
+                        <span class="text-sm font-medium"> $120 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image6.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> EMBER LEAF </span>
+                        <span class="text-sm font-medium"> $55 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image7.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> SKYLINE BLOOM </span>
+                        <span class="text-sm font-medium"> $75 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image8.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+
+                <a href="#" class="flex flex-col">
+                    <div class="mb-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold leading-none"> STILL WATERS </span>
+                        <span class="text-sm font-medium"> $250 / bunch </span>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
+                        <img src="assets/Image9.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer
+        class="bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_mobile.jpg)]
+    md:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_tablet.jpg)]
+    lg:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_desktop.jpg)] bg-center bg-no-repeat bg-cover text-white flex justify-end items-center flex-col md:mx-[40px] mx-[16px] px-[30px] py-[20px] rounded-t-[30px] h-[570px]">
+        <h1 class="text-[117px] font-logo">
+            <a href="index.html">OB.</a>
+        </h1>
+        <ul class="flex justify-between w-[100%] lg:text-[24px] md:text-[22px] text-[18px] font-medium">
+            <li>Miami, FL</li>
+            <li><a href="mailto:mail@ourblooms.com">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+<script>
+    let burger = document.getElementById('toggle');
+    let menu = document.getElementById('menu');
+    let isMenuOpened = false;
+
+    burger.classList.add('burger')
+
+    burger.addEventListener('click', (e) => {
+        if (!isMenuOpened) {
+            menu.classList.remove('hidden');
+        } else {
+            menu.classList.add('hidden');
+        }
+
+        burger.classList.toggle('open')
+        isMenuOpened = !isMenuOpened
+    })
+</script>
+
+</html>
