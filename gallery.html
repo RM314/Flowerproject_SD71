@@ -29,7 +29,7 @@
         --breakpoint-lg: 1280px;
       }
 
-      @layer components {
+    @layer components {
         .line {
             @apply block w-[24px] h-[2px] bg-black rounded-full transition-all duration-300 ease-in-out;
         }
@@ -45,11 +45,27 @@
         .burger.open .line-3 {
             @apply -rotate-45 -translate-y-[9px];
         }
+        .heading-1 {
+            @apply lg:text-[50px] md:text-[45px] text-[36px] leading-[110%] font-bold uppercase;
+        }
+        .heading-2 {
+            @apply lg:text-[40px] md:text-[36px] text-[24px] leading-[110%] font-bold;
+        }
+        .paragraph-1 {
+            @apply lg:text-[17px] md:text-[16px] text-[16px] leading-[140%];
+        }
+        .paragraph-2 {
+            @apply lg:text-[24px] md:text-[22px] text-[18px] leading-[140%] font-medium;
+        }
+        .caption-1 {
+            @apply md:text-[14px] text-[12px] leading-[140%] font-bold uppercase;
+        }
       }
+
     </style>
 </head>
 
-<body class="px-[40px] font-text">
+<section class="px-[40px] font-text">
     <header class="flex flex-wrap justify-between items-center border-b-1 border-graphite md:px-0 px-[16px] py-[20px]">
         <h1 class="text-[20px] md:text-[28px] lg:text-[30px] font-logo">
             <a href="index.html" class="md:block hidden">Our Blooms®</a>
@@ -62,7 +78,7 @@
             <span class="line line-3"></span>
         </button>
         <nav class="md:block md:w-auto w-[100%] hidden" id="menu">
-            <ul class="flex md:flex-row flex-col items-center font-bold uppercase text-[14px] gap-[20px] md:gap-[40px]">
+            <ul class="flex md:flex-row flex-col items-center caption-1 gap-[20px] md:gap-[40px]">
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="mailto:hello@ourblooms.com">Contact</a></li>
@@ -70,22 +86,23 @@
         </nav>
     </header>
 
-    <h1 class="uppercase text-4xl md:text-5xl font-extrabold tracking-tight mb-12 mt-12">gallery</h1>
+    <h1 class="heading-1 font-extrabold mb-[60px] mt-[32px]">gallery</h1>
 
     <section class="mt-24 mb-24">
         <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-12">
 
-            <h2 class="text-sm font-medium uppercase whitespace-nowrap">
-                Seasonal Arrangements
-            </h2>
 
+            <h2 class="text-sm font-medium uppercase text-[var(--color-graphite)]">
+                <span class="lg:block">Seasonal</span>
+                <span class="lg:block">Arrangements</span>
+            </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
 
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> DAWN BLOOM </span>
-                        <span class="text-sm font-medium"> $55 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $55 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image1.jpg" alt="" class="w-full h-full object-cover">
@@ -95,7 +112,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> SOLSTICE STEMS </span>
-                        <span class="text-sm font-medium"> $30 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $30 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image2.jpg" alt="" class="w-full h-full object-cover">
@@ -105,7 +122,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> WHISPER GREENS </span>
-                        <span class="text-sm font-medium"> $120 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $120 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image3.jpg" alt="" class="w-full h-full object-cover">
@@ -115,7 +132,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> CLARITY PETALS </span>
-                        <span class="text-sm font-medium"> $55 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $55 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image4.jpg" alt="" class="w-full h-full object-cover">
@@ -125,7 +142,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> RIVER STONE </span>
-                        <span class="text-sm font-medium"> $30 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $30 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image5.jpg" alt="" class="w-full h-full object-cover">
@@ -135,7 +152,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> MOONLIT MEADOW </span>
-                        <span class="text-sm font-medium"> $120 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $120 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image6.jpg" alt="" class="w-full h-full object-cover">
@@ -145,7 +162,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> EMBER LEAF </span>
-                        <span class="text-sm font-medium"> $55 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $55 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image7.jpg" alt="" class="w-full h-full object-cover">
@@ -155,7 +172,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> SKYLINE BLOOM </span>
-                        <span class="text-sm font-medium"> $75 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $75 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image8.jpg" alt="" class="w-full h-full object-cover">
@@ -165,7 +182,7 @@
                 <a href="#" class="flex flex-col">
                     <div class="mb-3 flex items-baseline gap-2">
                         <span class="text-2xl font-extrabold leading-none"> STILL WATERS </span>
-                        <span class="text-sm font-medium"> $250 / bunch </span>
+                        <span class="text-sm font-medium text-[var(--color-graphite)]"> $250 / bunch </span>
                     </div>
                     <div class="overflow-hidden rounded-2xl aspect-square bg-slate-100">
                         <img src="assets/Image9.jpg" alt="" class="w-full h-full object-cover">
@@ -188,8 +205,8 @@
 
                 <div class="md:col-span-2 border-t-4 border-black/60 py-8 grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-12">
                     <div>
-                    <p class="text-xl font-extrabold uppercase leading-tight">Floral Installations</p>
-                    <p class="mt-2 text-xl text-black/60 leading-relaxed">
+                    <h1 class="mb-[40px] heading-1">Floral Installations</h1>
+                    <p class="mt-2 paragraph-1">
                         We create clean, contemporary designs that elevate any environment,
                         from intimate gatherings to grand events.
                     </p>
@@ -203,8 +220,8 @@
 
                 <div class="md:col-span-2 border-t-4 border-black/60 py-8 grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-12">
                     <div>
-                        <p class="text-xl font-extrabold uppercase leading-tight">Native Plant Arrangements</p>
-                        <p class="mt-2 text-xl text-black/60 leading-relaxed">
+                        <h1 class="mb-[40px] heading-1">Native Plant Arrangements</h1>
+                        <p class="mt-2 paragraph-1">
                             Our selection of locally sourced flora brings natural resilience and effortless elegance to your home.
                         </p>
                     </div>
@@ -217,8 +234,8 @@
 
                 <div class="md:col-span-2 border-t-4 border-black/60 py-8 grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-12">
                     <div>
-                        <p class="text-xl font-extrabold uppercase leading-tight">Custom Floral Concepts</p>
-                        <p class="mt-2 text-xl text-black/60 leading-relaxed">
+                        <h1 class="mb-[40px] heading-1">Custom Floral Concepts</h1>
+                        <p class="mt-2 paragraph-1">
                             Your vision, our blooms. We build arrangements that are both personal and exquisitely simple.
                         </p>
                     </div>
@@ -232,27 +249,27 @@
         </div>
     </section>
 
-    <section class="mt-24 mb-24 grid place-items-center text-center">
-        <p class="text-l uppercase leading-tight">work with us</p>
-        <p class="mt-2 text-3xl font-bold max-w-prose md:max-w-lg lg:max-w-xl mx-auto">
+    <section class="flex flex-col text-center items-center justify-center px-[39px] py-[120px]">
+        <h2 class="mb-[40px] lg:w-[740px] md:w-[430px] w-[215px] heading-2">
             Discover how we can add a touch of natural beauty to your next event.
-        </p>
-        <div class="mt-10">
-            <a href="./about.html" class="inline-block bg-yellow-500 font-bold hover:bg-yellow-800 text-black uppercase py-3 px-8 rounded-sm transition-colors">
+        </h2>
+        <button class="flex rounded-[6px] bg-yellow py-[8px] px-[12px] caption-1 bg-yellow-500">
+            <a class="inline-flex items-center" href="about.html">
+                <span class="w-[4px] h-[4px] bg-black rounded mb-[2px] mr-[10px]"></span>
                 about us
             </a>
-        </div>
+        </button>
     </section>
 
 
-    <footer
+     <footer
         class="bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_mobile.jpg)]
     md:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_tablet.jpg)]
     lg:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_desktop.jpg)] bg-center bg-no-repeat bg-cover text-white flex justify-end items-center flex-col md:mx-[40px] mx-[16px] px-[30px] py-[20px] rounded-t-[30px] h-[570px]">
         <h1 class="text-[117px] font-logo">
             <a href="index.html">OB.</a>
         </h1>
-        <ul class="flex justify-between w-[100%] lg:text-[24px] md:text-[22px] text-[18px] font-medium">
+        <ul class="flex justify-between w-[100%] paragraph-2">
             <li>Miami, FL</li>
             <li><a href="mailto:mail@ourblooms.com">Contact</a></li>
         </ul>
