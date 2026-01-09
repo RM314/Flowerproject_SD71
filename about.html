@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Blooms</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-gray: rgba(0, 0, 0, 0.3);
+        --color-light-gray: rgba(0, 0, 0, 0.1);
+        --color-green: #496D4A;
+        --color-blue: #0248AA;
+        --color-purple: #772E9B;
+        --color-orange: #D3712C;
+        --color-yellow: #FFC800;
+        --color-graphite: #595959;
+
+        --font-logo: "Caprasimo", serif;
+        --font-text: "Outfit", sans-serif;
+
+        --breakpoint-md: 800px;
+        --breakpoint-lg: 1280px;
+      }
+
+      @layer components {
+        .line {
+            @apply block w-[24px] h-[2px] bg-black rounded-full transition-all duration-300 ease-in-out;
+        }
+
+        .burger.open .line-1 {
+            @apply rotate-45 translate-y-[9px];
+        }
+
+        .burger.open .line-2 {
+            @apply opacity-0;
+        }
+
+        .burger.open .line-3 {
+            @apply -rotate-45 -translate-y-[9px];
+        }
+      }
+    </style>
+</head>
+
+<body class="px-[40px] font-text">
+    <header class="flex flex-wrap justify-between items-center border-b-1 border-graphite md:px-0 px-[16px] py-[20px]">
+        <h1 class="text-[20px] md:text-[28px] lg:text-[30px] font-logo">
+            <a href="index.html" class="md:block hidden">Our Blooms®</a>
+            <a href="index.html" class="md:hidden">O.B.</a>
+        </h1>
+        <button id="toggle" type="button" class="burger md:hidden flex flex-col gap-[7px] cursor-pointer"
+            aria-label="Toggle menu" aria-expanded="false">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </button>
+        <nav class="md:block md:w-auto w-[100%] hidden" id="menu">
+            <ul class="flex md:flex-row flex-col items-center font-bold uppercase text-[14px] gap-[20px] md:gap-[40px]">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mailto:hello@ourblooms.com">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- about  SECTION -->
+    <section class="max-w-[1200px]  px-4 pt-[55px] pb-[80px]">
+        <!-- ABOUT TITLE -->
+        <h2 class="text-[48px] font-bold leading-tight mb-[40px]">
+            ABOUT
+        </h2>
+
+        <!-- LABELS AND IMAGE IN ONE ROW -->
+        <div class="flex items-start gap-6">
+            <!-- OUR STORY (LEFT SIDE) -->
+            <div class="pt-2">
+                <p class="text-[13px] font-bold uppercase tracking-wide text-gray-700">
+                    OUR STORY
+                </p>
+            </div>
+
+            <!-- IMAGE (CENTER) -->
+            <div class="flex-shrink-0">
+                <img src="assets/image.PNG" alt="Lily Smith with flowers"
+                    class="rounded-[24px] w-[420px] object-cover" />
+            </div>
+
+            <!-- LILY SMITH  -->
+            <div class="pt-2">
+                <p class="text-[13px] font-bold text-gray-900">
+                    LILY SMITH
+                </p>
+                <p class="text-[11px] font-bold uppercase tracking-wide text-gray-700">
+                    Owner
+                </p>
+            </div>
+        </div>
+
+        <!-- PARAGRAPH BELOW IMAGE -->
+        <p class="mt-[48px] text-[26px] md:text-[32px] font-bold leading-tight max-w-[900px]">
+            Our Blooms was founded in honor of Lily Smith's loving aunts,
+            Teresa and Beth.
+        </p>
+
+        <!-- THREE FLOWER IMAGES -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[60px]">
+            <div>
+                <img src="assets/Image 01.png" alt="Pink peonies in vase"
+                    class="rounded-[24px] w-full h-[480px] object-cover" />
+            </div>
+
+            <div>
+                <img src="assets/Image 02.png" alt="Dark red peony close-up"
+                    class="rounded-[24px] w-full h-[480px] object-cover" />
+            </div>
+
+            <div>
+                <img src="assets/Image 03.png" alt="White lily close-up"
+                    class="rounded-[24px] w-full h-[480px] object-cover" />
+            </div>
+        </div>
+
+        <!-- STORY PARAGRAPH -->
+        <p class="mt-[48px] text-[18px] leading-relaxed max-w-[1100px] font-normal">
+            Lily's journey with flowers began in the heart of Oregon, amidst the flourishing fields of her aunts' flower
+            farm. It was there, surrounded by the abundance of nature, that she discovered her passion for floral
+            design. From learning the names of each bloom to understanding the delicate balance of a bouquet, she
+            absorbed the artistry of flowers like the rich Oregon soil.
+            <br /><br />
+            Bloom & Co. is the expression of that lifelong passion, a place where her love for flowers translates into
+            beautifully curated arrangements that bring joy and elegance to your spaces.
+        </p>
+
+        <div class="mt-[60px]">
+            <img src="assets/Image breaker.png" alt="Pink tulips"
+                class="rounded-[24px] w-full max-w-[1200px] h-[400px] object-cover" />
+        </div>
+
+        <!-- CLOSING PARAGRAPHS -->
+        <p class="mt-[48px] text-[18px] leading-relaxed max-w-[1100px] font-normal">
+            From humble beginnings, Bloom&Co has grown into a beloved local destination, known for its artistic
+            arrangements, personal service, and commitment to quality.
+        </p>
+
+        <p class="mt-[32px] text-[18px] leading-relaxed max-w-[1100px] font-normal">
+            Discover how we can add a touch of natural beauty to your next event.
+        </p>
+
+        <!-- BOOK A CONSULTATION BUTTON -->
+        <div class="mt-[40px] mb-[80px]">
+            <a href="contact.html"
+                class="inline-block bg-[#F8D247] text-black font-bold text-[14px] uppercase tracking-wide px-8 py-4 rounded-md hover:bg-[#f5c614] transition-colors">
+                • BOOK A CONSULTATION
+            </a>
+        </div>
+    </section>
+
+    <footer
+        class="bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_mobile.jpg)]
+    md:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_tablet.jpg)]
+    lg:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_desktop.jpg)] bg-center bg-no-repeat bg-cover text-white flex justify-end items-center flex-col md:mx-[40px] mx-[16px] px-[30px] py-[20px] rounded-t-[30px] h-[570px]">
+        <h1 class="text-[117px] font-logo">
+            <a href="index.html">OB.</a>
+        </h1>
+        <ul class="flex justify-between w-[100%] lg:text-[24px] md:text-[22px] text-[18px] font-medium">
+            <li>Miami, FL</li>
+            <li><a href="mailto:mail@ourblooms.com">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+<script>
+    let burger = document.getElementById('toggle');
+    let menu = document.getElementById('menu');
+    let isMenuOpened = false;
+
+    burger.classList.add('burger')
+
+    burger.addEventListener('click', (e) => {
+        if (!isMenuOpened) {
+            menu.classList.remove('hidden');
+        } else {
+            menu.classList.add('hidden');
+        }
+
+        burger.classList.toggle('open')
+        isMenuOpened = !isMenuOpened
+    })
+</script>
+
+</html>
