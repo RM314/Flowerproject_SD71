@@ -45,7 +45,32 @@
         .burger.open .line-3 {
             @apply -rotate-45 -translate-y-[9px];
         }
+        .heading-1 {
+            @apply lg:text-[50px] md:text-[45px] text-[36px] leading-[110%] font-bold uppercase;
+        }
+        .heading-2 {
+            @apply lg:text-[40px] md:text-[36px] text-[24px] leading-[110%] font-bold;
+        }
+        .paragraph-1 {
+            @apply lg:text-[17px] md:text-[16px] text-[16px] leading-[140%];
+        }
+        .paragraph-2 {
+            @apply lg:text-[24px] md:text-[22px] text-[18px] leading-[140%] font-medium;
+        }
+        .caption-1 {
+            @apply md:text-[14px] text-[12px] leading-[140%] font-bold uppercase;
+        }
       }
+
+        .marquee {
+            animation: marquee 18s linear infinite;
+            will-change: transform;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
     </style>
 </head>
 
@@ -62,7 +87,7 @@
             <span class="line line-3"></span>
         </button>
         <nav class="md:block md:w-auto w-[100%] hidden" id="menu">
-            <ul class="flex md:flex-row flex-col items-center font-bold uppercase text-[14px] gap-[20px] md:gap-[40px]">
+            <ul class="flex md:flex-row flex-col items-center caption-1 gap-[20px] md:gap-[40px]">
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="mailto:hello@ourblooms.com">Contact</a></li>
@@ -70,7 +95,167 @@
         </nav>
     </header>
 
-    <h1>content</h1>
+    <main>
+        <section class="flex flex-col items-center pt-[60px] px-[16px] md:px-[39px]">
+            <h1
+                class="font-logo lg:text-[166px] md:text-[95px] text-[39px] md:leading-none md:mb-[34px] lg:mb-[16px] mb-[44px]">
+                Our Blooms<span class="lg:text-[100px] md:text-[65px] text-[24px] align-super">®</span></h1>
+            <div
+                class="flex self-stretch items-end rounded-[30px] lg:bg-[url(assets/thumbnail_desktop.png)] md:bg-[url(assets/thumbnail_tablet.png)] bg-[url(assets/thumbnail_mobile.png)] lg:bg-center md:bg-top bg-center bg-no-repeat bg-cover h-[570px] md:p-[25px] p-[20px]">
+                <div
+                    class="flex flex-col items-center justify-center bg-[url(assets/thumbnail_badge.svg)] bg-center bg-cover bg-no-repeat md:w-[190px] md:h-[190px] w-[150px] h-[150px]">
+                    <span class="caption-1">New</span>
+                    <span class="paragraph-2">10% Off Your</span>
+                    <span class="paragraph-2">First Order</span>
+                    <span class="text-[12px] font-bold uppercase">Special</span>
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col text-center items-center justify-center px-[39px] py-[120px]">
+            <p class="mb-[16px] caption-1 text-[#575757]">
+                who we are
+            </p>
+            <h2
+                class="mb-[40px] lg:w-[740px] md:w-[430px] w-[215px] heading-2">
+                We're Our Blooms<span class="align-super">®</span>
+                and we're here to
+                help you find your
+                floral story.
+            </h2>
+            <button
+                class="flex rounded-[6px] bg-yellow py-[8px] px-[12px] caption-1 bg-yellow-500">
+                <a class="inline-flex items-center" href="about.html">
+                    <span class="w-[4px] h-[4px] bg-black rounded mb-[2px] mr-[10px]"></span>
+                    about us
+                </a>
+            </button>
+        </section>
+
+        <section class="md:pb-[75px] pb-[40px]">
+            <div class="overflow-hidden">
+                <div id="slider" class="marquee flex md:gap-[20px] gap-[13.5px] w-max">
+                    <!-- left thin preview -->
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider1.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider2.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider3.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider4.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <!-- right thin preview -->
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider5.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider1.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider2.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider3.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider4.png" alt="slider image">
+                        </div>
+                    </div>
+
+                    <!-- right thin preview -->
+                    <div class="slide shrink-0 md:w-[300px] w-[200px]">
+                        <div class="md:h-[300px] h-[200px] rounded-[2rem] overflow-hidden bg-black/5">
+                            <img class="h-full w-full object-cover" src="assets/slider5.png" alt="slider image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="text-center flex items-center flex-col border-b-1 border-graphite mb-[60px]">
+                <h1 class="mb-[40px] heading-1">What we do</h1>
+                <p class="mb-[40px] paragraph-1">We bring a touch of that simple magic into your world.</p>
+            </div>
+            <div
+                class="flex flex-col items-center mx-[20px] text-center pt-[40px] pb-[80px] border-b-1 border-graphite">
+                <span class="heading-1 mb-[70px]">1</span>
+                <img class="rounded-[30px] mb-[80px]" src="assets/floral_installations.png" alt="FLORAL INSTALLATIONS">
+                <h1 class="heading-1 mb-[20px]">Floral
+                    Installations</h1>
+                <p class="paragraph-1">Living art for homes, businesses, and events.</p>
+            </div>
+            <div
+                class="flex flex-col items-center mx-[20px] text-center pt-[40px] pb-[80px] border-b-1 border-graphite">
+                <span class="heading-1 mb-[70px]">2</span>
+                <img class="rounded-[30px] mb-[80px]" src="assets/native_plant.png" alt="NATIVE PLANT ARRANGEMENTS">
+                <h1 class="heading-1 mb-[20px]">Native Plant
+                    Arrangements</h1>
+                <p class="paragraph-1">Whether it’s a private retreat or a public space, we craft floral experiences
+                    that bloom beyond expectations.</p>
+            </div>
+            <div
+                class="flex flex-col items-center mx-[20px] text-center pt-[40px] pb-[80px] border-b-1 border-graphite">
+                <span class="heading-1 mb-[70px]">3</span>
+                <img class="rounded-[30px] mb-[80px]" src="assets/custom_floral.png" alt="CUSTOM FLORAL CONCEPTS">
+                <h1 class="heading-1 mb-[20px]">Custom Floral
+                    Concepts</h1>
+                <p class="paragraph-1">Your vision, our blooms. We build arrangements that are both personal and
+                    exquisitely simple. Whether it’s a private retreat or a public space, we craft floral experiences
+                    that bloom beyond expectations.</p>
+            </div>
+        </section>
+
+        <section class="flex justify-center mt-[100px]">
+            <img src="assets/img_mobile.png" class="md:hidden rounded-[30px] w-[100%]" alt="img">
+            <img src="assets/img_tablet.png" class="md:max-lg:block hidden rounded-[30px] w-[100%]" alt="img">
+            <img src="assets/img_desktop.png" class="lg:block hidden rounded-[30px] w-[100%]" alt="img">
+        </section>
+
+        <section class="flex flex-col text-center items-center justify-center px-[39px] py-[120px]">
+            <p class="mb-[16px] caption-1 text-[#575757]">
+                work with us
+            </p>
+            <h2
+                class="mb-[40px] lg:w-[710px] md:w-[430px] w-[215px] heading-2">
+                Discover how we can add a touch of natural beauty to your next event.
+            </h2>
+            <button
+                class="flex rounded-[6px] bg-yellow py-[8px] px-[12px] caption-1 bg-yellow-500">
+                <a class="inline-flex items-center" href="about.html">
+                    <span class="w-[4px] h-[4px] bg-black rounded mb-[2px] mr-[10px]"></span>
+                    about us
+                </a>
+            </button>
+        </section>
+    </main>
 
     <footer
         class="bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(75,70,5,1)_100%),url(assets/footer_img_mobile.jpg)]
@@ -79,7 +264,7 @@
         <h1 class="text-[117px] font-logo">
             <a href="index.html">OB.</a>
         </h1>
-        <ul class="flex justify-between w-[100%] lg:text-[24px] md:text-[22px] text-[18px] font-medium">
+        <ul class="flex justify-between w-[100%] paragraph-2">
             <li>Miami, FL</li>
             <li><a href="mailto:mail@ourblooms.com">Contact</a></li>
         </ul>
@@ -102,6 +287,7 @@
         burger.classList.toggle('open')
         isMenuOpened = !isMenuOpened
     })
+
 </script>
 
 </html>
