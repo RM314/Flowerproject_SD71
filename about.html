@@ -29,7 +29,7 @@
         --breakpoint-lg: 1280px;
       }
 
-      @layer components {
+    @layer components {
         .line {
             @apply block w-[24px] h-[2px] bg-black rounded-full transition-all duration-300 ease-in-out;
         }
@@ -45,7 +45,29 @@
         .burger.open .line-3 {
             @apply -rotate-45 -translate-y-[9px];
         }
+        .heading-1 {
+            @apply lg:text-[50px] md:text-[45px] text-[36px] leading-[110%] font-bold uppercase;
+        }
+        .heading-2 {
+            @apply lg:text-[40px] md:text-[36px] text-[24px] leading-[110%] font-bold;
+        }
+        .heading-4 {
+            @apply lg:text-[15px] md:text-[14px] text-[13px] leading-[140%] font-bold;
+        }
+        .paragraph-1 {
+            @apply lg:text-[17px] md:text-[16px] text-[16px] leading-[140%];
+        }
+        .paragraph-2 {
+            @apply lg:text-[24px] md:text-[22px] text-[18px] leading-[140%] font-medium;
+        }
+        .caption-1 {
+            @apply md:text-[14px] text-[12px] leading-[140%] font-bold uppercase;
+        }
+        .caption-2 {
+            @apply text-[18px] leading-[140%] font-bold uppercase;
+        }
       }
+
     </style>
 </head>
 
@@ -62,13 +84,12 @@
             <span class="line line-3"></span>
         </button>
         <nav class="md:block md:w-auto w-[100%] hidden" id="menu">
-            <ul class="flex md:flex-row flex-col items-center font-bold uppercase text-[14px] gap-[20px] md:gap-[40px]">
+            <ul class="flex md:flex-row flex-col items-center caption-1 gap-[20px] md:gap-[40px]">
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="mailto:hello@ourblooms.com">Contact</a></li>
             </ul>
         </nav>
-
     </header>
     <!-- about  SECTION -->
     <section class="max-w-[1200px]  px-4 pt-[55px] pb-[80px]">
@@ -169,7 +190,7 @@
         <h1 class="text-[117px] font-logo">
             <a href="index.html">OB.</a>
         </h1>
-        <ul class="flex justify-between w-[100%] lg:text-[24px] md:text-[22px] text-[18px] font-medium">
+        <ul class="flex justify-between w-[100%] paragraph-2">
             <li>Miami, FL</li>
             <li><a href="mailto:mail@ourblooms.com">Contact</a></li>
         </ul>
